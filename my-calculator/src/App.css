@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  height: 350px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 4px solid black;
+  border-radius: 5px;
+}
+
+.display-container {
+  background-color:black;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: right;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5px;
+}
+
+.display-container p {
+  display: block;
+  margin: 10px 0 0 0;
+}
+
+.result {
+  font-size: 35px;
+  align-self: flex-end;
+  height: 75%;
+}
+
+.button-container {
+  display: grid;
+  height: 80%;
+  width: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+button {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.btn-operator {
+  background-color: darkgrey;
+  font-weight: bold;
+}
+
+#clear {
+  grid-column: 1 / 3;
+  background-color: crimson;
+  font-weight: bold;
+}
+
+#add, #subtract, #equals {
+  grid-column: 4 / 5;
+}
+
+#equals {
+  grid-row: 4 / 6;
+  background-color: darkslateblue;
+  outline: none;
+  font-weight: bold;
+}
+
+#decimal {
+  grid-column: 3 / 4;
+  grid-row: 5 / 6;
+}
+
+#zero {
+  grid-column: 1 / 3;
+  grid-row: 5 / 6;
+  outline: none;
+}
+
+#nine, #eight, #seven {
+  grid-row: 2 / 3;
+}
+
+#six, #five, #four {
+  grid-row: 3 / 4;
+}
